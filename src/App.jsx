@@ -1,0 +1,80 @@
+/* eslint-disable react/prop-types */
+import { useState } from "react";
+
+const Header = () => {
+  return <h1 className="title">Welcome To Tic Tac Toe Game ✨ </h1>;
+};
+
+const Square = ({ value, onCounterClick }) => {
+  return (
+    <button className="square" onClick={onCounterClick}>
+      {value}
+    </button>
+  );
+};
+
+const Board = () => {
+  const [counters, setCounters] = useState(Array(9).fill(null));
+  const [xIsNext, setXIsNext] = useState(true);
+
+  const handleClick = (i) => {
+    if (counters[i] || calculateWinner(counters)) return;
+
+    const nextCounters = counters.slice();
+    nextCounters[i] = xIsNext ? "X" : "O";
+    setCounters(nextCounters);
+    setXIsNext(!xIsNext);
+  };
+
+  const winner = calculateWinner(counters);
+  let status = "";
+  if (winner) {
+    status = "Winner : " + winner;
+  } else {
+    status = "Player : " + (xIsNext ? "X" : "O");
+  }
+
+  return (
+    <>
+      <div className="title">
+        <Header />
+        <div className="board">
+          <div className="status">{status}</div>
+          <Square value={counters[0]} onCounterClick={() => handleClick(0)} />
+          <Square value={counters[1]} onCounterClick={() => handleClick(1)} />
+          <Square value={counters[2]} onCounterClick={() => handleClick(2)} />
+          <Square value={counters[3]} onCounterClick={() => handleClick(3)} />
+          <Square value={counters[4]} onCounterClick={() => handleClick(4)} />
+          <Square value={counters[5]} onCounterClick={() => handleClick(5)} />
+          <Square value={counters[6]} onCounterClick={() => handleClick(6)} />
+          <Square value={counters[7]} onCounterClick={() => handleClick(7)} />
+          <Square value={counters[8]} onCounterClick={() => handleClick(8)} />
+          <a href="/"><button className="restart">Restart</button></a>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Board;
+
+const calculateWinner = (counters) => {
+  const lines = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+  ];
+
+  for (let i = 0; i < lines.length; i++) {
+    const [a, b, c] = lines[i];
+    if (counters[a] && counters[a] === counters[b] && counters[c]) {
+      return counters[a];
+    }
+  }
+  return false;
+};

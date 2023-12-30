@@ -56,3 +56,5 @@ const calculateWinner = (counters) => {
 };
 
 ```
+
+### Thank You 🎇

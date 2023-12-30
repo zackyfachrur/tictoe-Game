@@ -1,6 +1,6 @@
 ### React Tic Tac Toe Game
 
-#### Calculate Winner Logic
+#### 🎈Calculate Winner Logic :
 ```js
  const winner = calculateWinner(counters);
   let status = "";

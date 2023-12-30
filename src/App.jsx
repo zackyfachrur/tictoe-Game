@@ -49,7 +49,7 @@ const Board = () => {
           <Square value={counters[6]} onCounterClick={() => handleClick(6)} />
           <Square value={counters[7]} onCounterClick={() => handleClick(7)} />
           <Square value={counters[8]} onCounterClick={() => handleClick(8)} />
-          <a href="/"><button className="restart">Restart</button></a>
+          <a href="https://zumpy.rozistudio.com/game/"><button className="restart">Restart</button></a>
         </div>
       </div>
     </>

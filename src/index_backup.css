@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+} 
+body {justify-content: center;align-items: center;background-color: #242424;margin: auto;}
+.title {display: flex;justify-content: center;align-items: center;color: #ffffff;filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));font-size: 3rem;margin: auto;-webkit-filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));margin-top: 10rem;font-family: 'Courier New', Courier, monospace;}
+.restart {margin-top: 20px;border: solid 1px #242424;border-radius: 20px;font-family: 'Courier New', Courier, monospace;padding: 10px 20px 10px 20px;-webkit-border-radius: 20px;-moz-border-radius: 20px;-ms-border-radius: 20px;-o-border-radius: 20px;background-color: white;}
+.restart:hover {cursor: pointer;}
+.square {display: flex;justify-content: center;align-items: center;width: 100px;height: 100px;border: 1px solid #57679c;border-radius: 20px;background-color: white;font-size: 3rem;color: white;text-shadow: 0 0 0.2rem rgb(0, 0, 0);filter: drop-shadow(0 0 0.20rem rgb(0, 0, 0));font-weight: bolder;cursor: pointer;-webkit-border-radius: 20px;-moz-border-radius: 20px;-ms-border-radius: 20px;-o-border-radius: 20px;-webkit-filter: drop-shadow(0 0 0.20rem rgb(0, 0, 0));}
+.status {font-family: 'Courier New', Courier, monospace;}
+.board {display: flex;flex-wrap: wrap;justify-content: center;align-items: center;width: 300px;height: 300px;margin: auto;}
+h1 {font-size: 3.2em;line-height: 1.1;}
+@media screen and (max-width: 600px){
+  .title {display: flex;flex-direction: column;justify-content: center;align-items: center;color: #ffffff;filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));font-size: 1rem;margin: auto;-webkit-filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));margin-top: 10rem;font-family: 'Courier New', Courier, monospace;}
+  .status {font-family: 'Courier New', Courier, monospace;font-size: 1.5rem;width: 100%;}
+  .square {display: flex;justify-content: center;align-items: center;width: 60px;height: 60px;border: 1px solid #57679c;border-radius: 20px;background-color: white;font-size: 1.5rem;color: white;text-shadow: 0 0 0.2rem rgb(0, 0, 0);filter: drop-shadow(0 0 0.20rem rgb(0, 0, 0));font-weight: bolder;cursor: pointer;-webkit-border-radius: 20px;-moz-border-radius: 20px;-ms-border-radius: 20px;-o-border-radius: 20px;-webkit-filter: drop-shadow(0 0 0.20rem rgb(0, 0, 0));}
+  .board {display: flex;flex-wrap: wrap;justify-content: center;align-items: center;width: 200px;height: 200px;margin: auto;}
+  .restart {margin-top: 20px;border: solid 1px #242424;border-radius: 20px;font-family: 'Courier New', Courier, monospace;padding: 10px 20px 10px 20px;-webkit-border-radius: 20px;-moz-border-radius: 20px;-ms-border-radius: 20px;-o-border-radius: 20px;background-color: white;}
+  .restart:hover {cursor: pointer;}
+}
